@@ -1,0 +1,17 @@
+name: 'Spidev'
+output: '../lib/src/bindings/spidev_bindings.g.dart'
+preamble: |
+  part of bindings;
+  // ignore_for_file: non_constant_identifier_names, camel_case_types, unnecessary_brace_in_string_interps, unused_element
+array-workaround: true
+headers:
+  entry-points:
+    - spidev.h
+  include-directives:
+    - spidev.h
+macros:
+  include:
+    - SPI.*
+structs:
+  include:
+    - spi.*
